@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, escolha quão ágil és!</title>
+    <link rel="icon" href="img/game.png">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        
+        function iniciarJogo(){
+            var nivel = document.getElementById('nivel').value
+
+            if(nivel === ''){
+                alert('Selecione um nível')
+                return false
+            }
+            window.location.href = 'app.html?' + nivel
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="img/game.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select id="nivel" class="form-control">
+                            <option value="">-- Selecione o nível --</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Difícil</option>
+                            <option value="chucknorris">Chuck Norris</option>
+                        </select>         
+                    </div>           
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">        
+                    <button type="button" onclick="iniciarJogo()" class="btn btn-danger btn-lg">Iniciar jogo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
